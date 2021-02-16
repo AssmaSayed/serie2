@@ -16,6 +16,15 @@
             <div class="carousel-item">
                 <img src="{{ asset('img/chien.jpg') }}" class="d-block w-100" alt="...">
             </div>   
+
+            <div class="carousel-item">
+                <img src="{{ asset('img/ramen.jpg') }}" class="d-block w-100" alt="...">
+            </div> 
+
+            <div class="carousel-item">
+                <img src="{{ asset('img/spaghetti.jpg') }}" class="d-block w-100" alt="...">
+            </div>   
+
         </div>
     </div> 
 

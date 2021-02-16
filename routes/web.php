@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewController;
+use App\Http\Controllers\RouteOneController;
+use App\Http\Controllers\RouteTreeController;
+use App\Http\Controllers\RouteTwoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,18 +18,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('page.home');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/route1', function () {
-    return view('page.route1');
-})->name('r1');
 
-Route::get('/route2', function () {
-    return view('page.route2');
-})->name('r2');
+Route::get('/route1', [RouteOneController::class, 'index'])->name('r1');
 
-Route::get('/route3', function () {
-    return view('page.route3');
-})->name('r3');
+
+Route::get('/route2', [RouteTwoController::class, 'index'])->name('r2');
+
+Route::get('/route3', [RouteTreeController::class, 'index'])->name('r3');
+
+Route::get('/new', [NewController::class, 'index'])->name('new');
